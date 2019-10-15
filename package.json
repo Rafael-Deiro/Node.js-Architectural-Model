@@ -1,0 +1,30 @@
+{
+  "name": "arquiteturanode",
+  "version": "1.0.0",
+  "description": "Modelo de arquitetura para APIs em Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "inspect": "nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafael-Deiro/ModeloArquiteturaNode.js.git"
+  },
+  "keywords": [
+    "arquitetura",
+    "node",
+    "express"
+  ],
+  "author": "Rafael Deiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafael-Deiro/ModeloArquiteturaNode.js/issues"
+  },
+  "homepage": "https://github.com/Rafael-Deiro/ModeloArquiteturaNode.js#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.5"
+  }
+}
