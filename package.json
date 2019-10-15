@@ -1,0 +1,11 @@
+{
+  "name": "arquiteturanode",
+  "version": "1.0.0",
+  "description": "Modelo de arquitetura para API em Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Deiro",
+  "license": "ISC"
+}
