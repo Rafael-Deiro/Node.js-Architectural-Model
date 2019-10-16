@@ -1,6 +1,6 @@
 'use strict';
 
-const apiRoute = require('./apis');
+const apiRoute = require('./api');
 const express = require('express');
 
 function init(server = express()) {
