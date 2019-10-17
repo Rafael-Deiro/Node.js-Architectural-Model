@@ -9,6 +9,7 @@ Todo o código está em inglês. || **All the source code is in enlgish.**
 A fazer:
 - Migrar o código fonte para TypeScript
 
+---
 
 ## American English (en-US)
 To do:
