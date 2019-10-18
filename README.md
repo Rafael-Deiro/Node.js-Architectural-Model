@@ -7,10 +7,14 @@ Todo o código está em inglês. || **All the source code is in enlgish.**
 
 ## Português Brasileiro (pt-BR)
 A fazer:
+- Finalizar o CRUD de user em services
+- Refatorar o código fonte
 - Migrar o código fonte para TypeScript
 
 ---
 
 ## American English (en-US)
 To do:
-- Migrate source to Typescript
+- Finish user CRUD at services
+- Refactor source code
+- Migrate source to TypeScript
