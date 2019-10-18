@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const User = require('../../models/User');
+const { User } = require('../../models');
 
 const httpMessages = {
     validationError: {
@@ -18,7 +18,8 @@ const httpMessages = {
     }
 }
 
-function registerUser(req, res) {
+/*Corrigir para a nova model
+async function registerUser(req, res) {
     let { email, password } = req.body;
 
     if (!email || !password) {
@@ -38,7 +39,19 @@ function registerUser(req, res) {
         });
     }
 }
+*/
+
+async function getUsers(req, res) {
+    await User.findAll()
+    .then((user) => {
+        res.json(user);
+    })
+    .catch((err) => {
+        res.json(err);
+    });
+}
 
 module.exports = {
-    registerUser: registerUser
+    //registerUser: registerUser,
+    getUsers: getUsers
 }
