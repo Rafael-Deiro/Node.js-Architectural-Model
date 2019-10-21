@@ -1,5 +1,5 @@
-# Node.js Architecture Model
-Node.js API architecture model || **Modelo de arquitetura para APIs em Node.js**
+# Node.js Architectural Model
+Node.js API architectural model || **Modelo de arquitetura para APIs em Node.js**
 
 All the source code is in enlgish. || **Todo o código fonte está em inglês.**
 
