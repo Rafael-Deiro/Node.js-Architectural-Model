@@ -1,7 +1,9 @@
 'use strict';
 
+import { QueryInterface, DataTypes } from 'sequelize'
+
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: (queryInterface: QueryInterface, Sequelize = DataTypes) => {
     return queryInterface.createTable('users', {
       id: {
         allowNull: false,
@@ -39,12 +41,11 @@ module.exports = {
         field: 'updated_at'
       }
     }, {
-      schema: "gen",
       charset: 'utf8'
     });
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: (queryInterface: QueryInterface, Sequelize = DataTypes) => {
     return queryInterface.dropTable('users');
   }
 };

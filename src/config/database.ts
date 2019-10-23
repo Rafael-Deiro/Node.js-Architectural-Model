@@ -4,13 +4,23 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-let exportConfig;
-
 type dialect = 'mysql' | 'sqlite' | 'postgres' | 'mariadb' | 'mssql';
+type dbConfig = {
+    username: string,
+    password: string,
+    database: string,
+    host: string,
+    port: number,
+    dialect: dialect,
+    migrationStorage: string,
+    migrationStoragePath: string
+}
+
+let databaseConfig: dbConfig;
 
 switch (process.env.NODE_ENV){
     case 'production':
-        exportConfig = {
+        databaseConfig = {
             username: <string>process.env.PROD_DB_USERNAME,
             password: <string>process.env.PROD_DB_PASSWORD,
             database: <string>process.env.PROD_DB_NAME,
@@ -22,7 +32,7 @@ switch (process.env.NODE_ENV){
         };
         break;
     default:
-        exportConfig = {
+        databaseConfig = {
             username: <string>process.env.DEV_DB_USERNAME,
             password: <string>process.env.DEV_DB_PASSWORD,
             database: <string>process.env.DEV_DB_NAME,
@@ -35,4 +45,4 @@ switch (process.env.NODE_ENV){
         break;
 }
 
-export const databaseConfig = exportConfig;
+export { databaseConfig };
