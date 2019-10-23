@@ -9,8 +9,7 @@ All the source code is in enlgish. || **Todo o código fonte está em inglês.**
 To do:
 - Finish user CRUD at services
 - Refactor source code
-- Finish source migration to TypeScript (pending: Sequelize migrations)
-- Improve exception treatment
+- Sequelize-cli throws an error when trying to drop the db (apparently doesn't recognize the dialect)
 
 ---
 
@@ -18,5 +17,4 @@ To do:
 A fazer:
 - Finalizar o CRUD de user em services
 - Refatorar o código fonte
-- Finalizar a migração do código fonte para TypeScript (pendentes: migrations do Sequelize)
-- Melhorar o tratamento de exceções
+- A sequelize-cli está jogando um erro ao tentar deletar o banco (aparentemente não reconhece o SGDB)
