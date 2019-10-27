@@ -19,6 +19,7 @@ type dbConfig = {
 
 export const databaseConfig = {
     production: {
+        use_env_variable: 'DATABASE_URL',
         url: <string>process.env.DATABASE_URL,
         username: <string>process.env.PROD_DB_USERNAME,
         password: <string>process.env.PROD_DB_PASSWORD,
@@ -30,6 +31,7 @@ export const databaseConfig = {
         migrationStoragePath: <string>process.env.PROD_DB_MIGRATION_STORAGE_PATH
     },
     development: {
+        use_env_variable: 'DATABASE_URL',
         url: <string>process.env.DATABASE_URL,
         username: <string>process.env.DEV_DB_USERNAME,
         password: <string>process.env.DEV_DB_PASSWORD,

@@ -5,7 +5,7 @@ import { database, general } from '../config';
 
 let conn: Sequelize;
 
-if (process.env.HEROKU_POSTGRESQL){
+if (process.env.DATABASE_URL){
     console.log('Running heroku database');
     conn = new Sequelize(database.development.url, database.development)
 }
