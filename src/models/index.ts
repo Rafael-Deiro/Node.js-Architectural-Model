@@ -3,7 +3,14 @@
 import { Sequelize } from  "sequelize";
 import { database, general } from '../config';
 
-let conn = new Sequelize(database['development'].database, database['development'].username, database['development'].password, database['development']);
+let conn: Sequelize;
+
+if (process.env.HEROKU_POSTGRESQL){
+    conn = new Sequelize(database.development.url, database.development)
+}
+else {
+    conn = new Sequelize(database['development'].database, database['development'].username, database['development'].password, database['development'])
+}
 
 export default conn;
 

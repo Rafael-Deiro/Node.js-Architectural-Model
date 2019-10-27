@@ -6,6 +6,7 @@ dotenv.config();
 
 type dialect = 'mysql' | 'sqlite' | 'postgres' | 'mariadb' | 'mssql';
 type dbConfig = {
+    url: string,
     username: string,
     password: string,
     database: string,
@@ -18,6 +19,7 @@ type dbConfig = {
 
 export const databaseConfig = {
     production: {
+        url: <string>process.env.DATABASE_URL,
         username: <string>process.env.PROD_DB_USERNAME,
         password: <string>process.env.PROD_DB_PASSWORD,
         database: <string>process.env.PROD_DB_NAME,
@@ -28,6 +30,7 @@ export const databaseConfig = {
         migrationStoragePath: <string>process.env.PROD_DB_MIGRATION_STORAGE_PATH
     },
     development: {
+        url: <string>process.env.DATABASE_URL,
         username: <string>process.env.DEV_DB_USERNAME,
         password: <string>process.env.DEV_DB_PASSWORD,
         database: <string>process.env.DEV_DB_NAME,
