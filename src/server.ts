@@ -8,6 +8,10 @@ export default class Server {
     public static async start() {
         const app: express.Application = express();
 
+        app.get('/', (req, res) => {
+            res.json({ success: true, message: 'App successfully online' });
+        });
+
         app.use('/api', APIRoutes.init());
 
         app.listen(server.port, server.hostname, () => {
