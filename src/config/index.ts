@@ -6,7 +6,7 @@ import { databaseConfig } from './database';
 dotenv.config();
 
 export const general = {
-    enviroment: 'development',
+    enviroment: <string>process.env.NODE_ENV,
     appName: <string>process.env.APP_NAME
 }
 

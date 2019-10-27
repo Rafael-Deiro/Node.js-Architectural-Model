@@ -1,9 +1,9 @@
 'use strict';
 
 import { Sequelize } from  "sequelize";
-import { database } from '../config';
+import { database, general } from '../config';
 
-let conn = new Sequelize(database.database, database.username, database.password, database);
+let conn = new Sequelize(database['development'].database, database['development'].username, database['development'].password, database['development']);
 
 export default conn;
 

@@ -16,33 +16,25 @@ type dbConfig = {
     migrationStoragePath: string
 }
 
-let databaseConfig: dbConfig;
-
-switch (process.env.NODE_ENV){
-    case 'production':
-        databaseConfig = {
-            username: <string>process.env.PROD_DB_USERNAME,
-            password: <string>process.env.PROD_DB_PASSWORD,
-            database: <string>process.env.PROD_DB_NAME,
-            host: <string>process.env.PROD_DB_HOST,
-            port: parseInt(<string>process.env.PROD_DB_PORT),
-            dialect: <dialect>process.env.PROD_DB_DIALECT,
-            migrationStorage: <string>process.env.PROD_DB_MIGRATION_STORAGE,
-            migrationStoragePath: <string>process.env.PROD_DB_MIGRATION_STORAGE_PATH
-        };
-        break;
-    default:
-        databaseConfig = {
-            username: <string>process.env.DEV_DB_USERNAME,
-            password: <string>process.env.DEV_DB_PASSWORD,
-            database: <string>process.env.DEV_DB_NAME,
-            host: <string>process.env.DEV_DB_HOST,
-            port: parseInt(<string>process.env.DEV_DB_PORT),
-            dialect: <dialect>process.env.DEV_DB_DIALECT,
-            migrationStorage: <string>process.env.DEV_DB_MIGRATION_STORAGE,
-            migrationStoragePath: <string>process.env.DEV_DB_MIGRATION_STORAGE_PATH
-        };
-        break;
+export const databaseConfig = {
+    production: {
+        username: <string>process.env.PROD_DB_USERNAME,
+        password: <string>process.env.PROD_DB_PASSWORD,
+        database: <string>process.env.PROD_DB_NAME,
+        host: <string>process.env.PROD_DB_HOST,
+        port: parseInt(<string>process.env.PROD_DB_PORT),
+        dialect: <dialect>process.env.PROD_DB_DIALECT,
+        migrationStorage: <string>process.env.PROD_DB_MIGRATION_STORAGE,
+        migrationStoragePath: <string>process.env.PROD_DB_MIGRATION_STORAGE_PATH
+    },
+    development: {
+        username: <string>process.env.DEV_DB_USERNAME,
+        password: <string>process.env.DEV_DB_PASSWORD,
+        database: <string>process.env.DEV_DB_NAME,
+        host: <string>process.env.DEV_DB_HOST,
+        port: parseInt(<string>process.env.DEV_DB_PORT),
+        dialect: <dialect>process.env.DEV_DB_DIALECT,
+        migrationStorage: <string>process.env.DEV_DB_MIGRATION_STORAGE,
+        migrationStoragePath: <string>process.env.DEV_DB_MIGRATION_STORAGE_PATH
+    }
 }
-
-export { databaseConfig };
