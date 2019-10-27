@@ -4,9 +4,14 @@
   "description": "Modelo de arquitetura para APIs em Node.js",
   "main": "./build/index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "nodemon ./build/index.js",
     "inspect": "nodemon --inspect ./build/index.js",
     "postinstall": "tsc",
+=======
+    "start": "node ./build/index.js",
+    "inspect": "node --inspect ./build/index.js",
+>>>>>>> eeac084cf061044e344790b90ae7322a61cbcefd
     "ts:compile": "tsc",
     "db:create-migration": "npx sequelize-cli migration:create",
     "db:migrate": "npx sequelize-cli db:migrate",
