@@ -18,7 +18,7 @@ exports.databaseConfig = {
         database: process.env.PROD_DB_NAME,
         host: process.env.PROD_DB_HOST,
         port: parseInt(process.env.PROD_DB_PORT),
-        dialect: process.env.PROD_DB_DIALECT,
+        dialect: 'postgres',
         migrationStorage: process.env.PROD_DB_MIGRATION_STORAGE,
         migrationStoragePath: process.env.PROD_DB_MIGRATION_STORAGE_PATH
     },
@@ -30,7 +30,7 @@ exports.databaseConfig = {
         database: process.env.DEV_DB_NAME,
         host: process.env.DEV_DB_HOST,
         port: parseInt(process.env.DEV_DB_PORT),
-        dialect: process.env.DEV_DB_DIALECT,
+        dialect: 'postgres',
         migrationStorage: process.env.DEV_DB_MIGRATION_STORAGE,
         migrationStoragePath: process.env.DEV_DB_MIGRATION_STORAGE_PATH
     }
