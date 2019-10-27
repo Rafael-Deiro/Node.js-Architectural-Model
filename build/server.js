@@ -23,8 +23,8 @@ class Server {
                 res.json({ success: true, message: 'App successfully online' });
             });
             app.use('/api', routes_1.APIRoutes.init());
-            app.listen(config_1.server.port, config_1.server.hostname, () => {
-                console.log(`Server listening on http://${config_1.server.hostname}:${config_1.server.port} for \'${config_1.general.appName}\' application...`);
+            app.listen(process.env.PORT || config_1.server.port, () => {
+                console.log(`Server listening on port ${process.env.PORT || config_1.server.port} for \'${config_1.general.appName}\' application...`);
             });
         });
     }

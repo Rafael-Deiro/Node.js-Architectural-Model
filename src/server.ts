@@ -14,8 +14,8 @@ export default class Server {
 
         app.use('/api', APIRoutes.init());
 
-        app.listen(server.port, server.hostname, () => {
-            console.log(`Server listening on http://${server.hostname}:${server.port} for \'${general.appName}\' application...`);
+        app.listen(process.env.PORT || server.port, () => {
+            console.log(`Server listening on port ${process.env.PORT || server.port} for \'${general.appName}\' application...`);
         });
     }
 }
