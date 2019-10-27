@@ -1,12 +1,14 @@
 'use strict';
 
 import * as dotenv from 'dotenv';
-import { databaseConfig } from './database';
+import * as databaseConfig from './database';
 
 dotenv.config();
 
+type enviroment = 'development' | 'production';
+
 export const general = {
-    enviroment: <string>process.env.NODE_ENV,
+    enviroment: <enviroment>process.env.NODE_ENV,
     appName: <string>process.env.APP_NAME
 }
 

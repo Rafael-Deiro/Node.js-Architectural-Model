@@ -2,9 +2,9 @@
 
 import { QueryInterface, DataTypes } from 'sequelize'
 
-module.exports = {
+export = {
   up: (queryInterface: QueryInterface, Sequelize = DataTypes) => {
-    return queryInterface.createTable('users', {
+    return queryInterface.createTable({ schema: 'gen', tableName: 'users' }, {
       id: {
         allowNull: false,
         autoIncrement: true,

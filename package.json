@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon ./build/index.js",
     "inspect": "nodemon --inspect ./build/index.js",
+    "postinstall": "tsc",
     "ts:compile": "tsc",
     "db:create-migration": "npx sequelize-cli migration:create",
     "db:migrate": "npx sequelize-cli db:migrate",
@@ -41,10 +42,12 @@
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mongoose": "^5.7.5",
+    "nodemon": "^1.19.4",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.19.6",
+    "sequelize": "^5.21.1",
     "sequelize-cli": "^5.5.1",
+    "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
   }
 }

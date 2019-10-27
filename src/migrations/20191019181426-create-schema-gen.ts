@@ -2,7 +2,7 @@
 
 import { QueryInterface, DataTypes } from 'sequelize';
 
-module.exports = {
+export = {
   up: (queryInterface: QueryInterface, Sequelize = DataTypes) => {
     return queryInterface.createSchema('gen');
   },
