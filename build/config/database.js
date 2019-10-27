@@ -11,6 +11,7 @@ const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 exports.databaseConfig = {
     production: {
+        url: process.env.DATABASE_URL,
         username: process.env.PROD_DB_USERNAME,
         password: process.env.PROD_DB_PASSWORD,
         database: process.env.PROD_DB_NAME,
@@ -21,6 +22,7 @@ exports.databaseConfig = {
         migrationStoragePath: process.env.PROD_DB_MIGRATION_STORAGE_PATH
     },
     development: {
+        url: process.env.DATABASE_URL,
         username: process.env.DEV_DB_USERNAME,
         password: process.env.DEV_DB_PASSWORD,
         database: process.env.DEV_DB_NAME,

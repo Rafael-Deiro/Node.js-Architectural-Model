@@ -6,9 +6,11 @@ import { database, general } from '../config';
 let conn: Sequelize;
 
 if (process.env.HEROKU_POSTGRESQL){
+    console.log('Running heroku database');
     conn = new Sequelize(database.development.url, database.development)
 }
 else {
+    console.log('Running local database');
     conn = new Sequelize(database['development'].database, database['development'].username, database['development'].password, database['development'])
 }
 
