@@ -11,7 +11,7 @@ const dotenv = __importStar(require("dotenv"));
 const database_1 = require("./database");
 dotenv.config();
 exports.general = {
-    enviroment: process.env.NODE_ENV,
+    enviroment: 'development',
     appName: process.env.APP_NAME
 };
 exports.server = {
