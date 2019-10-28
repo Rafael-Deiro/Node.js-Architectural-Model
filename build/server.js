@@ -9,8 +9,14 @@ const express_1 = __importDefault(require("express"));
 class Server {
     static async start() {
         const app = express_1.default();
+        const appRoutes = {
+            user: {
+                list: 'GET /api/user',
+                create: 'POST /api/user'
+            }
+        };
         app.get('/', (req, res) => {
-            res.json({ success: true, message: 'App successfully online' });
+            res.json({ success: true, message: 'App successfully online', avaliableRoutes: appRoutes });
         });
         app.use('/api', routes_1.APIRoutes.init());
         app.listen(process.env.PORT || config_1.server.port, () => {

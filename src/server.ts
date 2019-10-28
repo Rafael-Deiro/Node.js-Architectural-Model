@@ -5,11 +5,18 @@ import { APIRoutes } from './routes';
 import express from 'express';
 
 export default class Server {
+
     public static async start() {
         const app: express.Application = express();
+        const appRoutes = {
+            user: {
+                list: 'GET /api/user',
+                create: 'POST /api/user'
+            }
+        }
 
         app.get('/', (req, res) => {
-            res.json({ success: true, message: 'App successfully online' });
+            res.json({ success: true, message: 'App successfully online', avaliableRoutes: appRoutes });
         });
 
         app.use('/api', APIRoutes.init());
