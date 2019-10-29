@@ -8,7 +8,7 @@ All the source code is in enlgish. || **Todo o código fonte está em inglês.**
 ## American English (en-US)
 To do:
 - Finish user CRUD at services
-    - teste
+    + teste
 - Find optimal model architecture
 - Put interfaces and DTOs away from model object (if viable)
 - Group API routers into modules, e.g.: Auth, General, AdminSpec
