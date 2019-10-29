@@ -21,4 +21,4 @@ A fazer:
 - Encontrar uma melhor arquitetura para as models
 - Separar as Interfaces e os DTOs do objeto da model (caso seja viável)
 - Agrupar os routers da API em módulos, ex.: Auth, General, AdminSpec
-- ***Baixa Prioridade:*** ~Criar um frontend em Angular ou React~
+- ***Baixa Prioridade:*** Criar um frontend em Angular ou React
