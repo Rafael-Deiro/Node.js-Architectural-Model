@@ -1,6 +1,6 @@
 'use strict';
 
-import { UserController } from '../controllers/user';
+import { ExampleController } from '../controllers/example';
 import { Router, Request, Response, NextFunction } from 'express';
 import * as bodyParser from 'body-parser';
 
@@ -14,7 +14,7 @@ class APIRoutes {
         });
 
         router.use(bodyParser.json());
-        router.use('/user', UserController.init());
+        router.use('/example', ExampleController.init());
 
         return router;
     }

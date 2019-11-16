@@ -9,7 +9,7 @@
     "postinstall": "tsc",
     "ts:compile": "tsc",
     "db:create": "npx sequelize-cli db:create && npx sequelize-cli db:migrate",
-    "db:create-migration": "npx sequelize-cli migration:create",
+    "db:create-migration": "npx sequelize-cli migration:create --migrations-path ./src/migrations",
     "db:migrate": "npx sequelize-cli db:migrate",
     "db:reset": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:drop && npm run db:create"
   },
@@ -37,7 +37,7 @@
     "@types/node": "^12.11.1",
     "@types/sequelize": "^4.28.6",
     "@types/validator": "^10.11.3",
-    "bcrypt": "^3.0.6",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",

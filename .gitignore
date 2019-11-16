@@ -2,3 +2,4 @@ tsconfig.tsbuildinfo
 *.tsbuildinfo
 /node_modules
 /build/migrations/sequelize-meta.json
+/build
