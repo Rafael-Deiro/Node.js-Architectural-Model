@@ -4,7 +4,7 @@ import { general, server } from './config';
 import { APIRoutes } from './routes';
 import express from 'express';
 
-export default class Server {
+export class Server {
 
     public static async start() {
         const app: express.Application = express();

@@ -9,7 +9,8 @@ type enviroment = 'development' | 'production';
 
 export const general = {
     enviroment: <enviroment>process.env.HEROKU_ENV || process.env.NODE_ENV,
-    appName: <string>process.env.APP_NAME
+    appName: <string>process.env.APP_NAME,
+    logsPath: <string>process.env.LOGS_PATH
 }
 
 export const server = {

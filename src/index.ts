@@ -1,8 +1,10 @@
 'use strict';
 
-import Server from './server';
+import { Server } from './server';
+import { Logger } from './helpers/logs';
 
 Server.start()
 .catch((err: Error) => {
-    console.log({ message: 'Couldn`t start the application server', error: err.message, stack: err.stack });
+    Logger.logError(err);
+    console.log('Couldn`t start the application server');
 });

@@ -3,6 +3,7 @@
 import { Router, Request, Response } from 'express';
 import { ExampleServices } from '../../services/example';
 import { Example } from '../../models/example';
+import { Logger } from '../../helpers/logs';
 
 class ExampleController {
     public static init() {
@@ -14,6 +15,8 @@ class ExampleController {
                 res.json({ success: true, results: examples });
             })
             .catch((err: Error) => {
+                Logger.logError(err);
+                
                 if (err.name.includes('Sequelize'))
                     res.json({ success: false, error: err });
                 else
