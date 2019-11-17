@@ -53,21 +53,14 @@ Example.init({
             notEmpty: true,
             len: [3, 255]
         }
-    },
-    createdAt: {
-        type: DataTypes.DATE,
-        field: 'created_at'
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        field: 'updated_at'
     }
 }, {
     sequelize: conn,
     underscored: true,
     freezeTableName: true,
     tableName: 'examples',
-    schema: 'gen'
+    schema: 'gen',
+    timestamps: false
 });
 
 export { Example };

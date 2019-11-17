@@ -37,14 +37,6 @@ export = {
                     notEmpty: true,
                     len: [3, 255]
                 }
-            },
-            createdAt: {
-                type: Sequelize.DATE,
-                field: 'created_at'
-            },
-            updatedAt: {
-                type: Sequelize.DATE,
-                field: 'updated_at'
             }
         }, {
             charset: 'utf8'

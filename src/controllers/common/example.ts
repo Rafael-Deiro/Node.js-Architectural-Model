@@ -1,8 +1,8 @@
 'use strict';
 
 import { Router, Request, Response } from 'express';
-import { ExampleServices } from '../services/example';
-import { Example } from '../models/example';
+import { ExampleServices } from '../../services/example';
+import { Example } from '../../models/example';
 
 class ExampleController {
     public static init() {
